@@ -61,7 +61,6 @@ export function ChatKitPanel({
       : "pending"
   );
   const [widgetInstanceKey, setWidgetInstanceKey] = useState(0);
-  const [logoOk, setLogoOk] = useState(true);
 
   const setErrorState = useCallback((updates: Partial<ErrorState>) => {
     setErrors((current) => ({ ...current, ...updates }));
@@ -344,43 +343,10 @@ export function ChatKitPanel({
     });
   }
 
+
+
   return (
     <div className="relative pb-8 flex h-[90vh] w-full rounded-2xl flex-col overflow-hidden bg-white shadow-sm transition-colors dark:bg-slate-900">
-      {/* Simple header showing company logo and short disclaimer. Place your logo at public/logo.png. */}
-  <div className="flex items-center justify-between px-3 py-2 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
-        <div className="flex items-center space-x-3">
-          {logoOk ? (
-            <div className="h-20 w-20 flex items-center justify-center overflow-hidden">
-              <img
-                src="/logo.png"
-                alt="Company logo"
-                width={80}
-                height={80}
-                className="h-20 w-20 object-contain object-center"
-                onError={() => setLogoOk(false)}
-                style={{ imageRendering: 'auto' }}
-              />
-            </div>
-          ) : (
-            /* Inline SVG fallback so UI still shows something if /logo.png is missing */
-            <svg className="h-12 w-12" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-              <rect width="120" height="120" fill="transparent" />
-              <g transform="translate(60,36)">
-                <path d="M0,-18 L6,-6 L18,0 L6,6 L0,18 L-6,6 L-18,0 L-6,-6 Z" fill="#FF6534" />
-                <circle cx="0" cy="0" r="18" fill="none" stroke="#4F9632" strokeWidth="2" />
-              </g>
-            </svg>
-          )}
-          <div>
-            <div className="text-sm font-semibold" style={{ color: '#FF6534' }}>Deer Isle Capital, LLC</div>
-            <div className="text-xs text-slate-500 dark:text-slate-300">Capital Market Communication Assistant</div>
-          </div>
-        </div>
-
-        <div className="text-xs text-slate-500 dark:text-slate-300 max-w-[40%] text-right">
-          This assistant provides informational assistance and does not constitute financial advice. <a href="/disclaimer" className="underline font-semibold" style={{ color: '#FF6534' }}>Full disclaimer</a>
-        </div>
-      </div>
       <ChatKit
         key={widgetInstanceKey}
         control={chatkit.control}

@@ -32,3 +32,25 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Try to ensure composer input text and placeholder are visible (white) */
+openai-chatkit input,
+openai-chatkit textarea,
+openai-chatkit ::part(composer) input,
+openai-chatkit ::part(composer-input),
+openai-chatkit ::part(composer) {
+  color: #ffffff !important;
+}
+
+openai-chatkit input::placeholder,
+openai-chatkit textarea::placeholder,
+openai-chatkit ::part(composer) input::placeholder {
+  color: rgba(255,255,255,0.75) !important;
+}
+
+/* Fallback for possible class names inside the component */
+openai-chatkit .composer,
+openai-chatkit .composer-input,
+openai-chatkit .ck-composer {
+  color: #ffffff !important;
+}
