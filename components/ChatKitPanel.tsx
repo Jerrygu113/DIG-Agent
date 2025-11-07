@@ -372,7 +372,7 @@ export function ChatKitPanel({
             </svg>
           )}
           <div>
-            <div className="text-sm font-semibold" style={{ color: '#FF6534' }}>Deer Isle Capital, LLC</div>
+            <div className="text-sm font-semibold" style={{ color: '#FF6534' }}>Deer Isle Financial, LLC</div>
             <div className="text-xs text-slate-500 dark:text-slate-300">Capital Market Communication Assistant</div>
           </div>
         </div>
@@ -384,19 +384,11 @@ export function ChatKitPanel({
       <ChatKit
         key={widgetInstanceKey}
         control={chatkit.control}
-        className={
-          blockingError || isInitializingSession
-            ? "pointer-events-none opacity-0"
-            : "block h-full w-full"
-        }
+        className="block h-full w-full"
       />
       <ErrorOverlay
         error={blockingError}
-        fallbackMessage={
-          blockingError || !isInitializingSession
-            ? null
-            : "Loading assistant session..."
-        }
+        fallbackMessage={null}
         onRetry={blockingError && errors.retryable ? handleResetChat : null}
         retryLabel="Restart chat"
       />

@@ -15,11 +15,11 @@ export function ErrorOverlay({
   onRetry,
   retryLabel,
 }: ErrorOverlayProps) {
-  if (!error && !fallbackMessage) {
+  if (!error) {
     return null;
   }
 
-  const content = error ?? fallbackMessage;
+  const content = error;
 
   if (!content) {
     return null;
