@@ -25,7 +25,7 @@ export const PLACEHOLDER_INPUT = "Type your message...";
 /**
  * 欢迎语
  */
-export const GREETING = "Capital Market Communication Assistant";
+export const GREETING = "Capital Market Communications Agent";
 
 /**
 
