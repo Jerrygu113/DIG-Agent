@@ -1,7 +1,6 @@
 import Script from "next/script";
 import type { Metadata } from "next";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Capital Market Communication Agent",
@@ -22,8 +21,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        {children}
-        <Analytics />
+  {children}
       </body>
     </html>
   );
