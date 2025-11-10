@@ -373,7 +373,7 @@ export function ChatKitPanel({
           )}
           <div>
             <div className="text-sm font-semibold" style={{ color: '#FF6534' }}>Deer Isle Financial, LLC</div>
-            <div className="text-xs text-slate-500 dark:text-slate-300">Capital Market Communication Assistant</div>
+            <div className="text-xs text-slate-500 dark:text-slate-300">Capital Market Communications Agent</div>
           </div>
         </div>
 
