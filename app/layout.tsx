@@ -1,11 +1,11 @@
 import Script from "next/script";
 import type { Metadata } from "next";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "agentkit Amazing",
-  description: "agentkit Amazing - Powered by ChatKit",
+  title: "Capital Market Communication Agent",
+  description: "Capital Market Communication Agent - Powered by Deer Isle",
 };
 
 export default function RootLayout({
